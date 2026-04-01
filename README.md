@@ -1,9 +1,14 @@
 # K8S-For-DevOps
 ### 
-```
 1- Install k8s cluster (minikube)
 2- Create a pod with the name redis and with the image redis.
+<img width="959" height="326" alt="image" src="https://github.com/user-attachments/assets/029abeb5-ebcd-4333-b9ea-010bc67a0c11" />
+
+
 3- Create a pod with the name nginx and with the image “nginx123”
+
+<img width="959" height="326" alt="image" src="https://github.com/user-attachments/assets/b55e8bac-86e1-41b0-8f10-c6a9b09178f5" />
+
 Use a pod-definition YAML file.
 4- What is the nginx pod status?
 5- Change the nginx pod image to “nginx” check the status again
@@ -32,5 +37,3 @@ What is the used image with the deployment-1?
 mention tag i.e nginx:latest and name it as nginx-deployment. App labels should be
 app: nginx-app and type: front-end. The container should be named as
 nginx-container; also make sure replica counts are 3.
-
-```
