@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-replica  #name of replicaset 
+spec:
+  # modify replicas according to your case
+  replicas: 2  # number of replicas to be created as Copies of the Pod
+  selector:
+    matchLabels:
+      tier: nginx-deployment # lazem y match al labels of template
+  # template is the specification of the Pod that will be created as a replica
+  template:
+    metadata:
+      name: nginx-deployment
+      labels:
+        tier: nginx-deployment
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.19
+        ports:
+        - containerPort: 80
+
