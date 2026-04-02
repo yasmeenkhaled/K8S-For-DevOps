@@ -27,6 +27,7 @@
    - name: `deployment-1`
    - image: `busybox`
    - replicas: `3`
+   
    ![alt text](image-4.png)
 
 13. How many Deployments and ReplicaSets exist on the system now?
@@ -43,4 +44,4 @@
    - labels: `app: nginx-app`, `type: front-end`
    - container name: `nginx-container`
    - replicas: `3`
- - ![alt text](image-5.png)
+ ![alt text](image-5.png)
