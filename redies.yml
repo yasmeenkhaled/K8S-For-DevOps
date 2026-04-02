@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redies
+  labels:
+    app: redies
+spec:
+  containers:
+  - name: redies
+    image: redis:latest
+    ports:
+    - containerPort: 6379
