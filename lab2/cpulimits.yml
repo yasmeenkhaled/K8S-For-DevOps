@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-limits  # Pod name
+spec:
+  containers:
+  - name: cpu-demo
+    image: vish/stress  # tool use to stress test 
+    resources:
+      limits:
+        cpu: "1" # limit is the maximum amount of CPU that the container can use, while request is the minimum amount of CPU that the container needs to run
+                   # If the container tries to use more than the limit, it will be throttled.
+      requests:
+        cpu: "0.5" # request is the minimum amount of CPU that the container needs to run, while limit is the maximum amount of CPU that the container can use
+                   # If the container tries to use more than the limit, it will be throttled.
+    args:    # stress test with 2 CPU cores throttling
+    - -cpus
+    - "2"
